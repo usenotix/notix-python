@@ -1,0 +1,31 @@
+[tool.poetry]
+# The distribution is notix-sdk because "notix" on PyPI belongs to an
+# unrelated project. The import name stays `notix`.
+name = "notix-sdk"
+version = "0.4.0"
+description = "Official Notix SDK for Python: send email and SMS, manage contacts and campaigns, verify one-time codes and webhooks."
+authors = ["HitchAfrica Technologies Limited <hey@usenotix.dev>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://usenotix.dev"
+documentation = "https://usenotix.dev/docs"
+repository = "https://github.com/usenotix/notix-python"
+keywords = ["notix", "email", "sms", "otp", "transactional email", "sdk"]
+packages = [{ include = "notix" }]
+include = ["notix/py.typed"]
+
+[tool.poetry.urls]
+"Issues" = "https://github.com/usenotix/notix-python/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+requests = "^2.33.0"
+typing_extensions = ">=4.7"
+urllib3 = "^2.7.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
